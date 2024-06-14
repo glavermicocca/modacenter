@@ -27,7 +27,7 @@ export interface ListProps<T = unknown> {
 export const GenericListItems =
     <T extends any>(): React.FC<ListProps<T>> =>
     ({ data, render, isLoading }): any => {
-        return data != null && data.length > 0 ? (
+        return data !== null && data.length > 0 ? (
             data.map(render)
         ) : isLoading == true ? (
             <Stack

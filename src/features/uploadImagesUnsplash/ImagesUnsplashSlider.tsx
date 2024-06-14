@@ -64,9 +64,9 @@ function ImagesUnsplashSlider({ images, setImage }: Props) {
     }
 
     return (
-        images != null &&
-        maxSteps != null &&
-        maxSteps != 0 && (
+        images !== null &&
+        maxSteps !== null &&
+        maxSteps !== 0 && (
             <Box>
                 <SwipeableViews
                     axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}

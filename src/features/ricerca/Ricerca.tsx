@@ -138,7 +138,7 @@ export function Ricerca({}: RicercaProps) {
                     />
                 </FormControl>
             </Stack>
-            {dataSearch.filter != null && (
+            {dataSearch.filter !== null && (
                 <CategorieMultiSelect
                     onFilter={(catMerce) => {
                         setDataSearch((prevData) => {
@@ -147,7 +147,7 @@ export function Ricerca({}: RicercaProps) {
                     }}
                 />
             )}
-            {data != null && (
+            {data !== null && (
                 <ArtAnaList
                     isLoading={isLoading}
                     data={data.data}

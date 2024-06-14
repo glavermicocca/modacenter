@@ -137,7 +137,7 @@ export default function ResponsiveDrawer(props: Props) {
                     <ListItemText primary={'Inviati'} />
                 </ListItem>
             </List>
-            {user?.azienda != null && (
+            {user?.azienda !== null && (
                 <List>
                     <Divider />
                     <ListItem component={Link} to="/fotoArticoli" button onClick={handleDrawerToggle}>
@@ -147,7 +147,7 @@ export default function ResponsiveDrawer(props: Props) {
                 </List>
             )}
             <Divider />
-            {user?.cf != null && (
+            {user?.cf !== null && (
                 <ListItemButton component="a" onClick={handleClick}>
                     <ListItemIcon>{<LockTwoToneIcon />}</ListItemIcon>
                     <ListItemText primary={`${user.cf.COD_CF} ${user.cf.E_MAIL_CF}`} secondary="logout" />
@@ -170,7 +170,7 @@ export default function ResponsiveDrawer(props: Props) {
         </div>
     )
 
-    const container = window !== undefined ? () => window().document.body : undefined
+    const container = window !=== undefined ? () => window().document.body : undefined
 
     let strLocation = ''
     let icon = <></>
@@ -228,7 +228,7 @@ export default function ResponsiveDrawer(props: Props) {
                     >
                         {strLocation}
                     </Typography>
-                    {user?.cf != null && <CarrelloQuantita />}
+                    {user?.cf !== null && <CarrelloQuantita />}
                 </Toolbar>
                 {location.pathname === '/offerte' && (
                     <img

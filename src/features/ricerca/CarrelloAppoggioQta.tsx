@@ -119,7 +119,7 @@ const CarrelloAppoggioQta = ({
         CONVERS_UM_BASE = newArtUm?.CONVERS_UM
         let _m_QUANT_UM_BASE = Big(QUANT_RIGA).mul(newArtUm?.CONVERS_UM || 0)
         if (newArtUm?.ARROT_UM == 1) {
-            if (newArtUm?.NUM_DEC_UM != null && newArtUm?.NUM_DEC_UM > 0) {
+            if (newArtUm?.NUM_DEC_UM !== null && newArtUm?.NUM_DEC_UM > 0) {
                 _m_QUANT_UM_BASE = _m_QUANT_UM_BASE.round(newArtUm.NUM_DEC_UM, Big.roundHalfUp)
             }
         }
@@ -166,11 +166,11 @@ const CarrelloAppoggioQta = ({
         })
     }
 
-    if (artUmList?.length != 0) {
+    if (artUmList?.length !== 0) {
         return (
             <>
                 <Grid item>
-                    {tipoArtAna !== TipoArtAna.OFFERTE ? (
+                    {tipoArtAna !=== TipoArtAna.OFFERTE ? (
                         <ToggleButtonGroup sx={{ height: 60 }}>
                             <ToggleButton
                                 id={UNITA_DI_MISURA.CASSA}

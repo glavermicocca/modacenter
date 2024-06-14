@@ -4,10 +4,7 @@ import 'moment/locale/it'
 import { useState } from 'react'
 
 import { GenericListItems } from '../../components/GenericListItem'
-import {
-    useGetCarrelloAppoggioQuery,
-    useGetCfQuery
-} from '../ricerca/ricercaAPI'
+import { useGetCarrelloAppoggioQuery, useGetCfQuery } from '../ricerca/ricercaAPI'
 import { CfDestMerceObj } from '../ricerca/ricercaSlice'
 import DataOraConsegna from './DataOraConsegna'
 import { DestinazioneItem } from './DestinazioneItem'
@@ -68,18 +65,18 @@ export function Destinazine() {
     }
 
     const isDestinazioni =
-        cfCliUser?.data != null && cfCliUser.data.cf != null ? cfCliUser?.data?.cf?.cfDestMerce?.length > 0 : false
+        cfCliUser?.data !== null && cfCliUser.data.cf !== null ? cfCliUser?.data?.cf?.cfDestMerce?.length > 0 : false
 
     const isDestinazioniOnlyOne = isDestinazioni == true ? cfCliUser?.data.cf.cfDestMerce.length === 1 : false
 
-    const NUM_DEST = carrello?.data.find((item) => item.NUM_DEST_COPY != null)?.NUM_DEST_COPY || NO_DESTINAZIONE
+    const NUM_DEST = carrello?.data.find((item) => item.NUM_DEST_COPY !== null)?.NUM_DEST_COPY || NO_DESTINAZIONE
 
     const destinazioneIniziale =
         isDestinazioniOnlyOne == true ? cfCliUser?.data.cf.cfDestMerce[0].NUM_DEST || NO_DESTINAZIONE : NUM_DEST
 
     const [destinazioneSelected, setDestinazioneSelected] = useState<number | null>(destinazioneIniziale)
 
-    if (carrello?.data == null || (carrello.data != null && carrello.data.length == 0))
+    if (carrello?.data == null || (carrello.data !== null && carrello.data.length == 0))
         return <Typography variant="h1">🤷‍♂️</Typography>
 
     if (cfCliUser == null)

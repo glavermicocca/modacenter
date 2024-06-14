@@ -22,7 +22,7 @@ import {
     ResetPasswordResponse,
     TIPO_IMAGE,
     UpdatePasswordRequest,
-    UpdatePasswordResponse
+    UpdatePasswordResponse,
 } from './ricercaSlice'
 
 export const ricercaApi = createApi({
@@ -83,7 +83,7 @@ export const ricercaApi = createApi({
         getRicercaArtAna: build.query<ArtAnaResponse, GenericQueryPagination>({
             providesTags: ['searchArtAna'],
             query: (qp) => {
-                const filter = qp.filter != null ? qp.filter.join(',') : ''
+                const filter = qp.filter !== null ? qp.filter.join(',') : ''
 
                 return {
                     url: `artAna?search=${qp.search}&page=${qp.page}&pageSize=${qp.pageSize}&history=${qp.history}&listino=${qp.listino}&filter=${filter}`,

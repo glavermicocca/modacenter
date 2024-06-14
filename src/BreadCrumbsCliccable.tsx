@@ -11,7 +11,7 @@ import { CfNewObj } from './features/ricerca/ricercaSlice'
 export default function BreadCrumbsCliccable() {
     const { data: cfData } = useGetCfQuery()
 
-    const cf: CfNewObj | null = cfData != null ? cfData?.data.cf : null
+    const cf: CfNewObj | null = cfData !== null ? cfData?.data.cf : null
 
     let steps = ['Iniziamo 🏁', 'Offerte 👀', 'Riepiloga 🤓', 'Luogo di consegna ⤴️', 'Fatta 🎉']
 
@@ -21,7 +21,7 @@ export default function BreadCrumbsCliccable() {
 
     let defaultStep
 
-    if (cf?.cfCliUser.FLAG_WEB_OFFERTE != 1) {
+    if (cf?.cfCliUser.FLAG_WEB_OFFERTE !== 1) {
         steps = ['Iniziamo 🏁', 'Riepiloga 🤓', 'Luogo di consegna ⤴️', 'Fatta 🎉']
 
         switch (location.pathname) {
@@ -59,7 +59,7 @@ export default function BreadCrumbsCliccable() {
     }
 
     const handleStep = (step: number) => () => {
-        if (cf?.cfCliUser.FLAG_WEB_OFFERTE != 1) {
+        if (cf?.cfCliUser.FLAG_WEB_OFFERTE !== 1) {
             switch (step) {
                 case 0:
                     navigate('/')
@@ -107,7 +107,7 @@ export default function BreadCrumbsCliccable() {
 
     const isXs = useMediaQuery((theme: any) => theme.breakpoints.only('xs'))
 
-    return defaultStep != null ? (
+    return defaultStep !== null ? (
         <Box sx={{ width: '100%' }} mb={2}>
             <Stepper nonLinear activeStep={defaultStep} alternativeLabel={isXs}>
                 {steps.map((label, index) => (

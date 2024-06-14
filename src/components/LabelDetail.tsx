@@ -14,7 +14,7 @@ export interface Props {
 export const LabelDetail = ({ labelTitle, label }: Props) => {
     return (
         <>
-            {label != null && label.length > 0 && (
+            {label !== null && label.length > 0 && (
                 <>
                     <Stack spacing={0.5} margin={0.5}>
                         <Typography sx={{ fontSize: 9 }} variant="caption" color="textSecondary">
@@ -32,13 +32,12 @@ export const LabelDetail = ({ labelTitle, label }: Props) => {
 
 export const LabelDetailList = ({ labelTitle, list }: Props) => (
     <Box sx={{ width: '100%' }} textAlign="center">
-        {labelTitle != null && (
+        {labelTitle !== null && (
             <Typography sx={{ fontSize: 9, width: '10%' }} variant="caption" color="textSecondary">
                 {labelTitle}
             </Typography>
         )}
         <Grid
-
             spacing={{ xs: 0, sm: 1 }}
             container
             direction="row"
@@ -54,7 +53,7 @@ export const LabelDetailList = ({ labelTitle, list }: Props) => (
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={10}>
-                        <Typography variant="body2">{it.value != null ? it.value : '-'}</Typography>
+                        <Typography variant="body2">{it.value !== null ? it.value : '-'}</Typography>
                     </Grid>
                 </React.Fragment>
             ))}

@@ -121,7 +121,7 @@ export default function DataOraConsegna({ setDate, setTempoSelected, cfCliUserOb
                         localeText={{ toolbarTitle: '' }}
                         value={currentDate}
                         onChange={(newValue) => {
-                            if (newValue != null) {
+                            if (newValue !== null) {
                                 setDate(newValue)
                                 setCurrentDate(dayjs(newValue))
                                 setCurrentTempoSelected(null)

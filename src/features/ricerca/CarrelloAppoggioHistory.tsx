@@ -15,7 +15,7 @@ const CarrelloAppoggioHistory = ({ carrelloAppoggio }: Props) => {
     ] = useInsertUpdateCarrelloAppoggioMutation()
 
     const handleClick = () => {
-        if (carrelloAppoggio != null) {
+        if (carrelloAppoggio !== null) {
             insert({
                 DES_RIGA: carrelloAppoggio.DES_RIGA,
                 COD_ART: carrelloAppoggio.COD_ART,
@@ -36,7 +36,7 @@ const CarrelloAppoggioHistory = ({ carrelloAppoggio }: Props) => {
         }
     }
 
-    if (carrelloAppoggio != null) {
+    if (carrelloAppoggio !== null) {
         return (
             <Button
                 variant="contained"

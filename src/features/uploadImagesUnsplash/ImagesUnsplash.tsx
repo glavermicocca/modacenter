@@ -118,7 +118,7 @@ export function ImagesUnsplash({ artAna }: ImagesUnsplashProps) {
                             justifyContent="space-between"
                             alignItems="flex-end"
                         >
-                            {data?.dataImages != null && (
+                            {data?.dataImages !== null && (
                                 <ImagesUnsplashSlider
                                     setImage={(image) => {
                                         try {

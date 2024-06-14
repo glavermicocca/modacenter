@@ -131,39 +131,39 @@ export function ArtAnaItem({
     if (_COD_LIST == _DEFAULT_COD_LIST) {
         isNota123 = false
         tipoArtAna = TipoArtAna.DEFAULT
-        if (_WEB_NOTA_1 != null) {
+        if (_WEB_NOTA_1 !== null) {
             DES_RIGA.push(_WEB_NOTA_1)
         }
-        if (_WEB_NOTA_2 != null) {
+        if (_WEB_NOTA_2 !== null) {
             DES_RIGA.push(_WEB_NOTA_2)
         }
-    } else if (listini.listiniPersonalizzati != null && listini.listiniPersonalizzati.COD_LIST == _COD_LIST) {
+    } else if (listini.listiniPersonalizzati !== null && listini.listiniPersonalizzati.COD_LIST == _COD_LIST) {
         tipoArtAna = TipoArtAna.LISTINO
         icon = <ReceiptLongTwoToneIcon color="primary" />
-        if (_WEB_NOTA_1 != null) {
+        if (_WEB_NOTA_1 !== null) {
             DES_RIGA.push(_WEB_NOTA_1)
             isNota123 = false
         }
-        if (_WEB_NOTA_2 != null) {
+        if (_WEB_NOTA_2 !== null) {
             DES_RIGA.push(_WEB_NOTA_2)
             isNota123 = false
         }
-    } else if (listini.listiniGruppo != null && listini.listiniGruppo.COD_LIST == _COD_LIST) {
+    } else if (listini.listiniGruppo !== null && listini.listiniGruppo.COD_LIST == _COD_LIST) {
         tipoArtAna = TipoArtAna.LISTINO
         icon = <ReceiptLongTwoToneIcon color="primary" />
-        if (_WEB_NOTA_1 != null) {
+        if (_WEB_NOTA_1 !== null) {
             DES_RIGA.push(_WEB_NOTA_1)
             isNota123 = false
         }
-        if (_WEB_NOTA_2 != null) {
+        if (_WEB_NOTA_2 !== null) {
             DES_RIGA.push(_WEB_NOTA_2)
             isNota123 = false
         }
-    } else if (listini.listiniOfferte != null && listini.listiniOfferte.COD_LIST == _COD_LIST) {
+    } else if (listini.listiniOfferte !== null && listini.listiniOfferte.COD_LIST == _COD_LIST) {
         tipoArtAna = TipoArtAna.OFFERTE
         // è un listini offerte
         icon = <VerifiedTwoToneIcon color="primary" />
-        if (_WEB_NOTA_3 != null) {
+        if (_WEB_NOTA_3 !== null) {
             DES_RIGA.push(_WEB_NOTA_3)
             isNota123 = false
         }
@@ -183,12 +183,12 @@ export function ArtAnaItem({
             <CardContentNoPaddingNoRadius>
                 <Stack direction="column" justifyContent="flex-end" gap={1}>
                     <Grid container direction="row">
-                        {dataImage?.dataImages != null && dataImage?.dataImages.length > 0 && (
+                        {dataImage?.dataImages !== null && dataImage?.dataImages.length > 0 && (
                             <Grid item xs={3}>
                                 <ImageSlider readonly data={dataImage.data} images={dataImage?.dataImages} />
                             </Grid>
                         )}
-                        <Grid item xs={dataImage?.dataImages != null && dataImage?.dataImages.length > 0 ? 9 : 12}>
+                        <Grid item xs={dataImage?.dataImages !== null && dataImage?.dataImages.length > 0 ? 9 : 12}>
                             <Grid container direction="column" paddingLeft={1} paddingRight={1}>
                                 <Grid item xs={12} sm={6}>
                                     <Stack direction="row" alignItems="center" gap={1}>
@@ -205,14 +205,14 @@ export function ArtAnaItem({
                                             {_DES_CAT}
                                         </Typography>
                                     </Stack>
-                                    {_WEB_DISABILITATO != 1 && (
+                                    {_WEB_DISABILITATO !== 1 && (
                                         <Stack direction="row" alignItems="center" gap={1}>
-                                            {carrelloItem?.QUANT_RIGA != null && carrelloItem?.QUANT_RIGA > 0 ? (
+                                            {carrelloItem?.QUANT_RIGA !== null && carrelloItem?.QUANT_RIGA > 0 ? (
                                                 <CarrelloAppoggioInputNote carrelloItem={carrelloItem} />
                                             ) : (
                                                 <hr style={{ margin: 0, width: '100%' }} />
                                             )}
-                                            {_PREZZO_LISTINO != null && (
+                                            {_PREZZO_LISTINO !== null && (
                                                 <>
                                                     <EuroSymbolTwoToneIcon />
                                                     <Typography variant="subtitle1" color="text.secondary">
@@ -220,8 +220,8 @@ export function ArtAnaItem({
                                                     </Typography>
                                                 </>
                                             )}
-                                            {carrelloAppoggio != null &&
-                                                carrelloAppoggio.artAna?.artListPrezzi != null && (
+                                            {carrelloAppoggio !== null &&
+                                                carrelloAppoggio.artAna?.artListPrezzi !== null && (
                                                     <>
                                                         <EuroSymbolTwoToneIcon />
                                                         <Typography variant="subtitle1" color="text.secondary">
@@ -237,7 +237,7 @@ export function ArtAnaItem({
                             </Grid>
                         </Grid>
                     </Grid>
-                    {_WEB_DISABILITATO != 1 ? (
+                    {_WEB_DISABILITATO !== 1 ? (
                         <Grid
                             container
                             direction="row"

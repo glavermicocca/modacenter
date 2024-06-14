@@ -3,7 +3,7 @@ import { FilledInput, FormControl, IconButton, Input, InputAdornment, InputLabel
 import { useState } from 'react'
 import { useInsertUpdateCarrelloAppoggioMutation } from './ricercaAPI'
 import { CarrelloAppoggioObj } from './ricercaSlice'
-import CheckCircleTwoToneIcon from '@mui/icons-material/CheckCircleTwoTone';
+import CheckCircleTwoToneIcon from '@mui/icons-material/CheckCircleTwoTone'
 
 export interface Props {
     carrelloItem?: CarrelloAppoggioObj
@@ -15,10 +15,10 @@ const CarrelloAppoggioInputNote = ({ carrelloItem }: Props) => {
         { isLoading, error }, // This is the destructured mutation result
     ] = useInsertUpdateCarrelloAppoggioMutation()
 
-    const [value, setValue] = useState<string>(carrelloItem?.NOTE || "")
+    const [value, setValue] = useState<string>(carrelloItem?.NOTE || '')
 
     const handleClick = () => {
-        if (editText == true && carrelloItem != null) {
+        if (editText == true && carrelloItem !== null) {
             setEditText(false)
             insert({
                 DES_RIGA: carrelloItem.DES_RIGA,
@@ -61,9 +61,13 @@ const CarrelloAppoggioInputNote = ({ carrelloItem }: Props) => {
                         handleClick()
                     }
                 }}
-                onChange={(event) => { setValue(event.target.value) }}
-                inputRef={input => input && input.focus()}
-                onBlur={() => { handleClick() }}
+                onChange={(event) => {
+                    setValue(event.target.value)
+                }}
+                inputRef={(input) => input && input.focus()}
+                onBlur={() => {
+                    handleClick()
+                }}
                 disabled={!editText}
                 fullWidth
                 type="text"

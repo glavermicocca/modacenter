@@ -38,7 +38,7 @@ export default function ImageItem({ artAna }: ImageItemProps) {
 
     return (
         <Card sx={{ height: '100%' }}>
-            {data?.dataImages != null && <ImageSlider data={data.data} images={data?.dataImages} />}
+            {data?.dataImages !== null && <ImageSlider data={data.data} images={data?.dataImages} />}
             <CardContent>
                 <ImagesUnsplash artAna={artAna} />
                 <Typography gutterBottom variant="h5" component="div">

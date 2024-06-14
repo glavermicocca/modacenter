@@ -52,7 +52,7 @@ export function Carrello({ gridColor }: PromoProps) {
                     <Button onClick={handleElimina}>Si</Button>
                 </DialogActions>
             </Dialog>
-            {data?.data != null && data.data.length > 0 && (
+            {data?.data !== null && data.data.length > 0 && (
                 <Box display="flex" justifyContent="center" alignItems="center">
                     <Button
                         sx={{ m: 1, height: 55 }}
@@ -68,7 +68,7 @@ export function Carrello({ gridColor }: PromoProps) {
                     </Button>
                 </Box>
             )}
-            {data?.data != null && (
+            {data?.data !== null && (
                 <CarrelloAppoggioList
                     isLoading={isLoading}
                     data={data.data}

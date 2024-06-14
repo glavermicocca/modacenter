@@ -28,7 +28,6 @@ interface PromoProps {
 const ArtAnaList = GenericListItems<ArtAna>()
 
 export function Offerte({ gridColor }: PromoProps) {
-
     const PAGE_SIZE = 20
 
     const defaultDataSearch: GenericQueryPagination = {
@@ -122,7 +121,7 @@ export function Offerte({ gridColor }: PromoProps) {
                         </Box>
                     </Grid> */}
             </Grid>
-            {data != null && (
+            {data !== null && (
                 <ArtAnaList
                     isLoading={isLoading}
                     data={data.data}

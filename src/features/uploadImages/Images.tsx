@@ -77,7 +77,7 @@ export function Images({ gridColor }: uploadImagesProps) {
     const [listFilterToggle, setListFilterToggle] = useState<boolean>(false)
 
     const handleChangeToggleButtons = (event: React.MouseEvent<HTMLElement>, newHistory: Array<string>) => {
-        if (newHistory.indexOf('history') !== -1) {
+        if (newHistory.indexOf('history') !=== -1) {
             setDataSearch((prevData) => {
                 setButtonsSelected(newHistory)
                 return { ...defaultDataSearch, history: true }
@@ -89,7 +89,7 @@ export function Images({ gridColor }: uploadImagesProps) {
             })
         }
 
-        if (newHistory.indexOf('filter') !== -1) {
+        if (newHistory.indexOf('filter') !=== -1) {
             setListFilterToggle(true)
         } else {
             setListFilterToggle(false)
