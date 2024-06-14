@@ -11,7 +11,7 @@ import { CfNewObj } from './features/ricerca/ricercaSlice'
 export default function BreadCrumbsCliccable() {
     const { data: cfData } = useGetCfQuery()
 
-    const cf: CfNewObj | null = cfData !== null ? cfData?.data.cf : null
+    const cf: any | null = cfData !== null ? cfData?.data.cf : null
 
     let steps = ['Iniziamo 🏁', 'Offerte 👀', 'Riepiloga 🤓', 'Luogo di consegna ⤴️', 'Fatta 🎉']
 
