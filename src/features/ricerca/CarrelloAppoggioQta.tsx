@@ -170,7 +170,7 @@ const CarrelloAppoggioQta = ({
         return (
             <>
                 <Grid item>
-                    {tipoArtAna !=== TipoArtAna.OFFERTE ? (
+                    {tipoArtAna !== TipoArtAna.OFFERTE ? (
                         <ToggleButtonGroup sx={{ height: 60 }}>
                             <ToggleButton
                                 id={UNITA_DI_MISURA.CASSA}

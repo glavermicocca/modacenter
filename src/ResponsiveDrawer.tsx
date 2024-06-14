@@ -109,7 +109,7 @@ export default function ResponsiveDrawer(props: Props) {
 
     const { data: cfData } = useGetCfQuery()
 
-    const cf: CfNewObj | null = cfData?.data?.cf ?? null;
+    const cf: CfNewObj | null = cfData?.data?.cf ?? null
 
     const drawer = (
         <div>
@@ -170,7 +170,7 @@ export default function ResponsiveDrawer(props: Props) {
         </div>
     )
 
-    const container = window !=== undefined ? () => window().document.body : undefined
+    const container = window !== undefined ? () => window().document.body : undefined
 
     let strLocation = ''
     let icon = <></>
