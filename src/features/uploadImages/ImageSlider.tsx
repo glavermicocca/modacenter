@@ -47,13 +47,13 @@ function ImageSlider({ data, images, readonly }: Props) {
     }
 
     return (
-        maxSteps !== null &&
+        maxSteps != null &&
         maxSteps > 0 && (
             <>
                 <GenericDialog
                     siTxt="si"
                     noTxt="chiudi"
-                    isOpen={deleteArtImageObj !== null}
+                    isOpen={deleteArtImageObj != null}
                     title="Cancella immagine"
                     content={
                         <Box

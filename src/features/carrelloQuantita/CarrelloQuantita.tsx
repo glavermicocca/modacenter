@@ -37,7 +37,7 @@ export function CarrelloQuantita() {
     const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>()
 
     function handleFocus() {
-        if (data?.data !== null && data?.data.length > 0) {
+        if (data?.data != null && data?.data.length > 0) {
             setDialogContinuosShopping(() => {
                 setTimeoutId(
                     setTimeout(() => {

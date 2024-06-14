@@ -93,7 +93,7 @@ export default function ToggleButtonStoricoListini({ count, onChangeFilter, onCh
 
     const { data: cfData } = useGetCfQuery()
 
-    const cf: CfNewObj | null = cfData !== null ? cfData?.data.cf : null
+    const cf: CfNewObj | null = cfData != null ? cfData?.data.cf : null
 
     const navigate = useNavigate()
 

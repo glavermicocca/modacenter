@@ -33,7 +33,7 @@ export const NumericPad = ({
         (event: any) => {
             const text = event.target.textContent
 
-            if (value !== null) {
+            if (value != null) {
                 switch (text) {
                     case '0':
                     case '1':
@@ -97,12 +97,12 @@ export const NumericPad = ({
     return (
         <Box display="flex" justifyContent="center" alignItems="center" marginTop={1}>
             <Grid container spacing={1} sx={{ maxWidth: 400 }}>
-                {auxUpper !== null && (
+                {auxUpper != null && (
                     <Grid item xs={4}>
                         {auxUpper}
                     </Grid>
                 )}
-                <Grid item xs={auxDown !== null ? 8 : 12}>
+                <Grid item xs={auxDown != null ? 8 : 12}>
                     <Stack direction="row" spacing={0} justifyContent="flex-end">
                         <Grid container spacing={1}>
                             <Grid item xs={12}>
@@ -186,12 +186,12 @@ export const NumericPad = ({
                         del
                     </Button>
                 </Grid>
-                {auxDown !== null && (
+                {auxDown != null && (
                     <Grid item xs={5}>
                         {auxDown}
                     </Grid>
                 )}
-                <Grid item xs={auxDown !== null ? 7 : 12}>
+                <Grid item xs={auxDown != null ? 7 : 12}>
                     <Button
                         sx={{ fontSize: '28px' }}
                         disabled={!isValid || value == ''}

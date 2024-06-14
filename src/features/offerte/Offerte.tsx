@@ -121,7 +121,7 @@ export function Offerte({ gridColor }: PromoProps) {
                         </Box>
                     </Grid> */}
             </Grid>
-            {data !== null && (
+            {data != null && (
                 <ArtAnaList
                     isLoading={isLoading}
                     data={data.data}

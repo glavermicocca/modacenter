@@ -14,5 +14,5 @@ export function Images({ _COD_ART, matchesVH }: ArtAnaItemProps) {
         TIPO: TIPO_IMAGE.ART_ANA,
     })
 
-    return data !== null && data.dataImages !== null && <ImageSlider images={data.dataImages} matchesVH={matchesVH} />
+    return data != null && data.dataImages != null && <ImageSlider images={data.dataImages} matchesVH={matchesVH} />
 }

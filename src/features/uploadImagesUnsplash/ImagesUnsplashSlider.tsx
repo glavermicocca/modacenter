@@ -64,8 +64,8 @@ function ImagesUnsplashSlider({ images, setImage }: Props) {
     }
 
     return (
-        images !== null &&
-        maxSteps !== null &&
+        images != null &&
+        maxSteps != null &&
         maxSteps !== 0 && (
             <Box>
                 <SwipeableViews

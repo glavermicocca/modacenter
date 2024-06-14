@@ -102,7 +102,7 @@ export function Inviati({ gridColor }: Props) {
                             elevation={5}
                             expanded={openAccordion === carrelloTestataAppoggio.RIF_CLI_NR}
                             onChange={(event: React.SyntheticEvent, expanded: boolean) => {
-                                if (carrelloTestataAppoggio.RIF_CLI_NR !== null) {
+                                if (carrelloTestataAppoggio.RIF_CLI_NR != null) {
                                     handleAccordionChange(carrelloTestataAppoggio.RIF_CLI_NR)
                                 }
                             }}
@@ -116,8 +116,8 @@ export function Inviati({ gridColor }: Props) {
                                             </Typography>
                                             <Typography variant="caption" color="text.secondary">
                                                 (art.{' '}
-                                                {carrelloTestataAppoggio !== null &&
-                                                    carrelloTestataAppoggio?.carrelloAppoggioList !== null &&
+                                                {carrelloTestataAppoggio != null &&
+                                                    carrelloTestataAppoggio?.carrelloAppoggioList != null &&
                                                     (carrelloTestataAppoggio?.carrelloAppoggioList?.length).toString()}
                                                 )
                                             </Typography>

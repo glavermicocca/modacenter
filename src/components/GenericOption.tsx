@@ -24,7 +24,7 @@ export function GenericOption({ data, label, handleSelected, defaultKeySelectedB
         // handleSelected(selectOptionArtUm[0].key)
     }
 
-    return data !== null && data.length > 0 ? (
+    return data != null && data.length > 0 ? (
         <Box sx={{ minWidth: 120 }}>
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">{label}</InputLabel>

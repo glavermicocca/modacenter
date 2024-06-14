@@ -18,7 +18,7 @@ const CarrelloAppoggioInputNote = ({ carrelloItem }: Props) => {
     const [value, setValue] = useState<string>(carrelloItem?.NOTE || '')
 
     const handleClick = () => {
-        if (editText == true && carrelloItem !== null) {
+        if (editText == true && carrelloItem != null) {
             setEditText(false)
             insert({
                 DES_RIGA: carrelloItem.DES_RIGA,
