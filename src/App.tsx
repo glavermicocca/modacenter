@@ -64,9 +64,9 @@ function App() {
     }
 
     useEffect(() => {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            setIsDarkTheme(e.matches)
-        })
+        // window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        //     setIsDarkTheme(e.matches)
+        // })
     }, [])
 
     const theme = isDarkTheme ? createTheme(dark, itIT) : createTheme(light, itIT)
