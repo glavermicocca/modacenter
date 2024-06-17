@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/modacenter/static/css/main.687a21ae.css",
-    "main.js": "/modacenter/static/js/main.f81d7842.js",
-    "static/media/heart.svg": "/modacenter/static/media/heart.bbe0c6abfc80855e9b30137194b26766.svg",
+    "main.css": "/modacenter/static/css/main.715493aa.css",
+    "main.js": "/modacenter/static/js/main.3e4b5e19.js",
+    "service-worker.js": "/modacenter/service-worker.js",
     "static/media/roboto-latin-500-normal.woff2": "/modacenter/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/modacenter/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
     "static/media/roboto-latin-400-normal.woff2": "/modacenter/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
@@ -51,24 +51,20 @@
     "static/media/roboto-vietnamese-400-normal.woff": "/modacenter/static/media/roboto-vietnamese-400-normal.e0e8ba725ebd107367a8.woff",
     "static/media/roboto-vietnamese-500-normal.woff": "/modacenter/static/media/roboto-vietnamese-500-normal.657896dad292ee9a0a0a.woff",
     "static/media/roboto-vietnamese-700-normal.woff": "/modacenter/static/media/roboto-vietnamese-700-normal.4df79f684fcbca8386bd.woff",
-    "static/media/inviati.svg": "/modacenter/static/media/inviati.39280f913b772f7d9cb7e94d3d5caa10.svg",
-    "static/media/listino.svg": "/modacenter/static/media/listino.01f8be153a4585b4dc1c0828990b73c7.svg",
-    "static/media/download.svg": "/modacenter/static/media/download.90de2fc5afcb9836975e7736d166cb39.svg",
     "static/media/roboto-greek-ext-500-normal.woff2": "/modacenter/static/media/roboto-greek-ext-500-normal.6fb9cffb1d3e72bf9293.woff2",
     "static/media/roboto-greek-ext-400-normal.woff2": "/modacenter/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "static/media/roboto-greek-ext-300-normal.woff2": "/modacenter/static/media/roboto-greek-ext-300-normal.35b9d6be04b95f0f0530.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "/modacenter/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
-    "static/media/filter.svg": "/modacenter/static/media/filter.def62af58de6dbf461f4e92a8387de3a.svg",
     "static/media/roboto-greek-ext-500-normal.woff": "/modacenter/static/media/roboto-greek-ext-500-normal.eaa367bbd0b333a7f80b.woff",
     "static/media/roboto-greek-ext-300-normal.woff": "/modacenter/static/media/roboto-greek-ext-300-normal.392a45a84c081c4b412d.woff",
     "static/media/roboto-greek-ext-400-normal.woff": "/modacenter/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/modacenter/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/modacenter/index.html",
-    "main.687a21ae.css.map": "/modacenter/static/css/main.687a21ae.css.map",
-    "main.f81d7842.js.map": "/modacenter/static/js/main.f81d7842.js.map"
+    "main.715493aa.css.map": "/modacenter/static/css/main.715493aa.css.map",
+    "main.3e4b5e19.js.map": "/modacenter/static/js/main.3e4b5e19.js.map"
   },
   "entrypoints": [
-    "static/css/main.687a21ae.css",
-    "static/js/main.f81d7842.js"
+    "static/css/main.715493aa.css",
+    "static/js/main.3e4b5e19.js"
   ]
 }
