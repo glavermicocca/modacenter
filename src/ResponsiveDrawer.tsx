@@ -25,7 +25,6 @@ import Typography from '@mui/material/Typography'
 import * as React from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAppSelector } from './app/hooks'
-import { CarrelloQuantita } from './features/carrelloQuantita/CarrelloQuantita'
 
 import { useGetCfQuery, useLogoutPostMutation } from './features/ricerca/ricercaAPI'
 import { CfNewObj, LoginRequest, selectUser } from './features/ricerca/ricercaSlice'
@@ -234,7 +233,6 @@ export default function ResponsiveDrawer(props: Props) {
                     >
                         {strLocation}
                     </Typography>
-                    {user?.cf != null && <CarrelloQuantita />}
                 </Toolbar>
                 {location.pathname === '/offerte' && (
                     <img
@@ -258,13 +256,13 @@ export default function ResponsiveDrawer(props: Props) {
                 ModalProps={{
                     keepMounted: true, // Better open performance on mobile.
                 }}
-                sx={{
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                }}
+                // sx={{
+                //     '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                // }}
             >
                 {drawer}
             </Drawer>
-            <Box sx={{ mt: 1 }}>{children}</Box>
+            <Box sx={{ mt: 10, ml: 2, mr: 2 }}>{children}</Box>
             {/* <Fab sx={{
                 position: "fixed",
                 left: "50%",

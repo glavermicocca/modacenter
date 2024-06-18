@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
 import { ricercaApi } from './ricercaAPI'
-import { TempoConsegna } from '../destinazione/TempoItem'
 
 const STORAGE_KEY = 'USER'
 
@@ -170,7 +169,6 @@ export interface CarrelloTestataAppoggioObj {
     STATO_DEST_MERCE?: string
     TEL_DEST_MERCE?: string
 
-    TEMPO_CONSEGNA: TempoConsegna
 }
 
 export interface CarrelloConfirmResponse {
@@ -599,7 +597,6 @@ export interface CfNewObj {
 }
 
 export interface TempoConsegnaItem {
-    value: TempoConsegna
     label: string
     icon: any
     end: any

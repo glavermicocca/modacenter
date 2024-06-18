@@ -1,33 +1,34 @@
 import { ThemeProvider } from '@emotion/react'
 import Brightness4TwoToneIcon from '@mui/icons-material/Brightness4TwoTone'
 import { Box, Button, createTheme, CssBaseline, FormControlLabel, Switch, ThemeOptions } from '@mui/material'
-import { green } from '@mui/material/colors'
+import { deepPurple, green, indigo, purple } from '@mui/material/colors'
 import { itIT } from '@mui/x-date-pickers/locales'
 import { useEffect, useState } from 'react'
 import { createBrowserRouter, Outlet, RouteObject, RouterProvider } from 'react-router-dom'
 import BreadCrumbsCliccable from './BreadCrumbsCliccable'
 import ErrorPage from './error-page'
 import { Carrello } from './features/carrello/Carrello'
-import { Destinazine } from './features/destinazione/Destinazione'
-import { Fatta } from './features/fatta/Fatta'
 import LoginSide from './features/login/LoginSide'
 import PrivateRoute from './features/login/PrivateRoute'
 import PrivateRouteRoleAzienda from './features/login/PrivateRouteRoleAzienda'
 import { Offerte } from './features/offerte/Offerte'
 import ResponsiveDrawer from './ResponsiveDrawer'
+import CardQr from './features/cardQr'
+
+const colors = [indigo[500], purple[500]]
 
 // Define theme settings
 const light: ThemeOptions = {
     palette: {
         mode: 'light',
         primary: {
-            main: green[200],
+            main: purple[100],
         },
         secondary: {
-            main: green[200],
+            main: deepPurple[100],
         },
     },
-    spacing: 8,
+    //spacing: 8,
     shape: {
         borderRadius: 10,
     },
@@ -35,9 +36,22 @@ const light: ThemeOptions = {
         MuiAppBar: {
             styleOverrides: {
                 root: {
-                    backgroundColor: green[900],
+                    // backgroundColor: green[900],
                     borderRadius: 10,
                     margin: 10,
+                },
+            },
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 10,
+                    background: `linear-gradient(to right bottom, ${colors.join(',')})`,
+                    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+                    '&:hover': {
+                        backgroundColor: 'primary.dark',
+                        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',
+                    },
                 },
             },
         },
@@ -48,10 +62,10 @@ const dark: ThemeOptions = {
     palette: {
         mode: 'dark',
         primary: {
-            main: green[300],
+            main: green[900],
         },
         secondary: {
-            main: green[100],
+            main: green[900],
         },
     },
     spacing: 8,
@@ -62,7 +76,17 @@ const dark: ThemeOptions = {
         MuiAppBar: {
             styleOverrides: {
                 root: {
-                    backgroundColor: green[300],
+                    // backgroundColor: green[900],
+                    borderRadius: 10,
+                    margin: 10,
+                },
+            },
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 10,
+                    background: `linear-gradient(to right bottom, ${colors.join(',')})`,
                 },
             },
         },
@@ -117,12 +141,7 @@ function App() {
                         />
                     }
                 >
-                    <Box
-                        sx={{
-                            
-                        }}
-                        id="back-to-top-anchor"
-                    >
+                    <Box sx={{}} id="back-to-top-anchor">
                         <BreadCrumbsCliccable />
                         <Outlet />
                     </Box>
@@ -134,8 +153,8 @@ function App() {
                     path: '/modacenter',
                     element: (
                         <>
-                            <Button>PIPPO</Button>
-                            <p>ricerca</p>
+                            <CardQr />
+                            <Button>Dettagli</Button>
                         </>
                         // <PrivateRoute>
 
@@ -160,26 +179,10 @@ function App() {
                     ),
                 },
                 {
-                    path: '/destinazione',
-                    element: (
-                        <PrivateRoute>
-                            <Destinazine />
-                        </PrivateRoute>
-                    ),
-                },
-                {
                     path: '/inviati',
                     element: (
                         <PrivateRoute>
                             <p>inviati</p>
-                        </PrivateRoute>
-                    ),
-                },
-                {
-                    path: '/fatta',
-                    element: (
-                        <PrivateRoute>
-                            <Fatta gridColor={green} />
                         </PrivateRoute>
                     ),
                 },

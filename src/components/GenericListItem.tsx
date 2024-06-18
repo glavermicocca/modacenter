@@ -1,5 +1,4 @@
 import { Stack, Typography } from '@mui/material'
-import { fruttaEVerduraEmoji, mescolaArray } from '../features/fatta/Fatta'
 
 export interface GenericQueryPagination {
     search?: string
@@ -55,7 +54,6 @@ export const GenericListItems =
                 <Typography color="primary" variant="h3" sx={{ p: 5 }}>
                     LISTA VUOTA
                 </Typography>
-                <Typography variant="h3">{mescolaArray(fruttaEVerduraEmoji)}</Typography>
             </Stack>
         )
     }

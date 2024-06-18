@@ -28,7 +28,7 @@ root.render(
             dense
             ref={notistackRef}
             action={(key) => <Button onClick={onClickDismiss(key)}>Annulla</Button>}
-            anchorOrigin={{ horizontal: 'center', vertical: 'top' }}
+            anchorOrigin={{ horizontal: 'center', vertical: 'bottom' }}
             maxSnack={3}
         >
             <SnackbarUtilsConfigurator />
