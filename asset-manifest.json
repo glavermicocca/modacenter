@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/modacenter/static/css/main.715493aa.css",
-    "main.js": "/modacenter/static/js/main.bbfe9ec9.js",
+    "main.js": "/modacenter/static/js/main.5ae33026.js",
     "service-worker.js": "/modacenter/service-worker.js",
     "static/media/roboto-latin-500-normal.woff2": "/modacenter/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/modacenter/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -61,10 +61,10 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/modacenter/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/modacenter/index.html",
     "main.715493aa.css.map": "/modacenter/static/css/main.715493aa.css.map",
-    "main.bbfe9ec9.js.map": "/modacenter/static/js/main.bbfe9ec9.js.map"
+    "main.5ae33026.js.map": "/modacenter/static/js/main.5ae33026.js.map"
   },
   "entrypoints": [
     "static/css/main.715493aa.css",
-    "static/js/main.bbfe9ec9.js"
+    "static/js/main.5ae33026.js"
   ]
 }
