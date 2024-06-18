@@ -15,7 +15,6 @@ import { useState } from 'react'
 
 import BackspaceTwoToneIcon from '@mui/icons-material/BackspaceTwoTone'
 import { GenericListItems, GenericQueryPagination } from '../../components/GenericListItem'
-import { ArtAnaItem } from '../ricerca/ArtAnaItem'
 import { useGetListiniOfferteQuery } from '../ricerca/ricercaAPI'
 import { ArtAna } from '../ricerca/ricercaSlice'
 
@@ -121,31 +120,6 @@ export function Offerte({ gridColor }: PromoProps) {
                         </Box>
                     </Grid> */}
             </Grid>
-            {data != null && (
-                <ArtAnaList
-                    isLoading={isLoading}
-                    data={data.data}
-                    render={(artAna) => (
-                        <ArtAnaItem
-                            artUmList={artAna.artUmList}
-                            carrelloAppoggio={artAna.carrelloAppoggio}
-                            key={artAna.COD_ART}
-                            _COD_ART={artAna.COD_ART}
-                            _DES_RIGA={artAna.DES_ART}
-                            _DES_CAT={artAna.DES_CAT}
-                            _UM_BASE={artAna.UM_BASE}
-                            _PREZZO_LISTINO={artAna.PREZZO_LISTINO}
-                            _COD_LIST={artAna.COD_LIST}
-                            _DEFAULT_COD_LIST={artAna.DEFAULT_COD_LIST}
-                            _WEB_DISABILITATO={artAna.WEB_DISABILITATO}
-                            _WEB_NOTA_1={artAna.WEB_NOTA_1}
-                            _WEB_NOTA_2={artAna.WEB_NOTA_2}
-                            _WEB_NOTA_3={artAna.WEB_NOTA_3}
-                            listini={data.listini}
-                        />
-                    )}
-                />
-            )}
             <Stack alignItems={'center'} spacing={2} sx={{ marginTop: 2 }}>
                 <Pagination
                     count={data == null ? 0 : Math.round(data.rowCount / PAGE_SIZE) + 1}

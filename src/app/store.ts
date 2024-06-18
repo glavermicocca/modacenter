@@ -4,23 +4,17 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 import { ricercaApi } from '../features/ricerca/ricercaAPI'
 import ricercaReducer from '../features/ricerca/ricercaSlice'
 
-import { imagesUnsplashApi } from '../features/uploadImagesUnsplash/imagesUnsplashAPI'
-import imageUnsplashReducer from '../features/uploadImagesUnsplash/imagesUnsplashSlice'
-
 import { rtkQueryErrorLogger } from './errorCatching'
 
 export const store = configureStore({
     reducer: {
         ricerca: ricercaReducer,
-        imageUnsplash: imageUnsplashReducer,
         [ricercaApi.reducerPath]: ricercaApi.reducer,
-        [imagesUnsplashApi.reducerPath]: imagesUnsplashApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({ serializableCheck: false }).concat(
             rtkQueryErrorLogger,
             ricercaApi.middleware,
-            imagesUnsplashApi.middleware,
         ),
 })
 

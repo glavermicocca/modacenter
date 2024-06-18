@@ -208,7 +208,13 @@ export default function ResponsiveDrawer(props: Props) {
 
     return (
         <>
-            <AppBar position="fixed">
+            <AppBar
+                sx={{
+                    mr: '1%',
+                    ml: '1%',
+                    width: '98%',
+                }}
+            >
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -242,19 +248,6 @@ export default function ResponsiveDrawer(props: Props) {
                         }}
                     />
                 )}
-                <img
-                    src={'/background/awning_red.svg'}
-                    style={{
-                        top: 0,
-                        height: '100px',
-                        width: '70%',
-                        left: '0px',
-                        right: '0px',
-                        position: 'absolute',
-                        zIndex: -1,
-                        margin: '0 auto',
-                    }}
-                />
             </AppBar>
 
             <Drawer

@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 import DeleteForeverTwoToneIcon from '@mui/icons-material/DeleteForeverTwoTone'
 import { GenericListItems } from '../../components/GenericListItem'
-import { ArtAnaItem } from '../ricerca/ArtAnaItem'
 import { useDeleteOrdineMutation, useGetCarrelloAppoggioQuery } from '../ricerca/ricercaAPI'
 import { CarrelloAppoggioObj } from '../ricerca/ricercaSlice'
 
@@ -67,31 +66,6 @@ export function Carrello({ gridColor }: PromoProps) {
                         Svuota il carrello
                     </Button>
                 </Box>
-            )}
-            {data?.data != null && (
-                <CarrelloAppoggioList
-                    isLoading={isLoading}
-                    data={data.data}
-                    render={(carrelloAppoggio) => (
-                        <ArtAnaItem
-                            listini={data.listini}
-                            carrelloAppoggio={carrelloAppoggio}
-                            artUmList={carrelloAppoggio!!.artAna!!.artUmList!!}
-                            key={carrelloAppoggio.COD_ART + carrelloAppoggio.COD_LIST}
-                            _COD_ART={carrelloAppoggio.COD_ART}
-                            _DES_RIGA={carrelloAppoggio.DES_RIGA}
-                            _DES_CAT={carrelloAppoggio!!.artAna!!.catMerce?.DES_CAT}
-                            _UM_BASE={carrelloAppoggio.UM_BASE}
-                            _PREZZO_LISTINO={undefined}
-                            _COD_LIST={carrelloAppoggio.COD_LIST}
-                            _DEFAULT_COD_LIST={carrelloAppoggio.DEFAULT_COD_LIST}
-                            _WEB_DISABILITATO={carrelloAppoggio.WEB_DISABILITATO}
-                            _WEB_NOTA_1={carrelloAppoggio.WEB_NOTA_1}
-                            _WEB_NOTA_2={carrelloAppoggio.WEB_NOTA_2}
-                            _WEB_NOTA_3={carrelloAppoggio.WEB_NOTA_3}
-                        />
-                    )}
-                />
             )}
         </>
     )

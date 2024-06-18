@@ -8,15 +8,11 @@ import Link from '@mui/material/Link'
 import Paper from '@mui/material/Paper'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
+import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { useLocation, useNavigate } from 'react-router-dom'
-import SwipeableViews from 'react-swipeable-views'
-import { autoPlay } from 'react-swipeable-views-utils'
+import { useNavigate } from 'react-router-dom'
 import { useLoginPostMutation } from '../ricerca/ricercaAPI'
 import { CustomError, LoginRequest } from '../ricerca/ricercaSlice'
-import { useState } from 'react'
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
 function Copyright(props: any) {
     return (
@@ -75,32 +71,6 @@ export default function LoginSide() {
 
     return (
         <Grid container component="main" sx={{ height: '100vh' }}>
-            <Grid item xs={false} sm={4} md={7}>
-                <AutoPlaySwipeableViews
-                    onChangeIndex={handleStepChange}
-                    enableMouseEvents={true}
-                    slideStyle={{ overflow: 'hidden' }}
-                >
-                    {images?.map((step, index) => {
-                        return (
-                            <Box
-                                component="img"
-                                key={index}
-                                sx={{
-                                    height: '100vh',
-                                    width: '100%',
-                                    backgroundImage: `url(${images[activeStep]})`,
-                                    backgroundRepeat: 'no-repeat',
-                                    backgroundColor: (t) =>
-                                        t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                }}
-                            />
-                        )
-                    })}
-                </AutoPlaySwipeableViews>
-            </Grid>
 
             <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                 <Box
